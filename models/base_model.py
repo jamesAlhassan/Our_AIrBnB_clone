@@ -5,10 +5,10 @@ from datetime import datetime as dt
 
 
 class BaseModel:
-    def __init__(self, id, created_at, updated_at):
+    def __init__(self):
         self.id = str(ui())
         self.created_at = dt.now()
-        updated_at = dt.now()
+        self.updated_at = dt.now()
 
     def __str__(self):
         return f"[{type(self.__name)}] ({self.id}) {self.__dict__}"
