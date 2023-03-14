@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from uuid import uuid4 as ui
 from datetime import datetime as dt
@@ -11,10 +11,10 @@ class BaseModel:
         self.updated_at = dt.now()
 
     def __str__(self):
-        return f"[{type(self.__name)}] ({self.id}) {self.__dict__}"
+        return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
-        self.updated = dt()
+        self.updated_at = dt()
 
     def to_dict(self):
 
